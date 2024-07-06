@@ -1,0 +1,21 @@
+{% extends 'basic.html' %}
+
+{% block title %}
+Edit Student
+{% endblock %}
+
+{% block content %}
+<div class="container p-3" >
+<h2>Update Student Details Here</h2>
+    <form action='' method="post">
+        {% csrf_token %}
+        <input type="text" name="tbname" value="{{st.Name}}" class='form-control' placeholder="Enter Your Name"><br>
+        <input type="text" name="tbage" value="{{st.Age}}" class='form-control' placeholder="Enter Your Age"><br>
+        <input type="text" name="tbcity" value="{{st.City}}" class='form-control' placeholder="Enter Your City"><br>
+        <input type="text" name="tbemail" value="{{st.Email}}" class='form-control' placeholder="Enter Your Email"><br>
+        <input type="text" name="tbphone" value="{{st.Phone}}" class='form-control' placeholder="Enter Your Phone"><br>
+        <input type="submit" class="btn btn-outline-warning form-control" value="EditStudent">
+
+    </form>
+</div>
+{% endblock %}
